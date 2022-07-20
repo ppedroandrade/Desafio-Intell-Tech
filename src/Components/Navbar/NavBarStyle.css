@@ -1,0 +1,36 @@
+.nav {
+  background: #13A89E;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+  z-index: 10;
+}
+
+.NavBtn {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  position: relative;
+
+  @media screen and (max-width: 768px) display: none;
+}
+.NavBtnLink {
+  border-radius: 4px;
+  background: #256ce1;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  /* Second Nav */
+  margin-left: 24px;
+}
+.NavBtnLink:hover {
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+  color: #010606;
+}
