@@ -1,36 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .nav {
-  background: #13A89E;
-  height: 80px;
+  background: #13a89e;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  z-index: 10;
+  padding: 0 2rem;
+  height: 80px;
 }
 
 .NavBtn {
   display: flex;
-  align-items: center;
   margin-right: 24px;
   position: relative;
 
   @media screen and (max-width: 768px) display: none;
 }
 .NavBtnLink {
-  border-radius: 4px;
-  background: #256ce1;
+  align-items: flex-end;
+  border-radius: 0px;
+  background: whitesmoke;
   padding: 10px 22px;
-  color: #fff;
+  color: #212121;
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
   text-decoration: none;
-
-  /* Second Nav */
-  margin-left: 24px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
 }
 .NavBtnLink:hover {
   transition: all 0.2s ease-in-out;
-  background: #fff;
+  background: rgb(223, 89, 12);
   color: #010606;
 }
+
