@@ -8,7 +8,7 @@
   left: -100%;
   transition: 850ms;
   justify-content: left;
-  padding: 1rem 0;
+  padding: 1rem 0.8rem;
 }
 
 .nav-menu.active {
@@ -44,7 +44,4 @@
   transition: all 0.2s ease-in-out;
   background: #b5b5b5;
   color: #010606;
-}
-span {
-  margin-left: 16px;
 }
