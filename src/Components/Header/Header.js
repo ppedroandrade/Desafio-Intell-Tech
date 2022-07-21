@@ -1,26 +1,16 @@
 import React from "react";
-import { AiFillPrinter, AiFillPlusSquare } from "react-icons/ai";
-
+import { AiFillPrinter } from "react-icons/ai";
+import Navbar from "../Sidebar";
 import "./Header.css";
 
 const Header = () => {
   return (
     <>
-      {/* <div>
-        <img src="../image/logo.png" alt="logo" />
-      </div> */}
-
       <div className="nav">
+        <Navbar />
         <div className="NavBtn">
-          <button className="NavBtnLink">
-            <AiFillPlusSquare className="opa" />
-            Adicionar
-          </button>
-        </div>
-
-        <div className="NavBtn">
-          <button className="NavBtnLink">
-            <AiFillPrinter className="NavBtnIcon" />
+          <button className="NavBtnLinkPrinter">
+            <AiFillPrinter size={25} />
           </button>
         </div>
       </div>
@@ -28,4 +18,4 @@ const Header = () => {
   );
 };
 
-export default Header ;
+export default Header;

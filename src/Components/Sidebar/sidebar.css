@@ -1,0 +1,50 @@
+.nav-menu {
+  background-color: #38cfc4;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  justify-content: left;
+  padding: 1rem 0;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.nav-menu-items{
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-toggle {
+  background-color: #38cfc4;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: left;
+}
+.NavBtnLink {
+  border-radius: 0px;
+  background: whitesmoke;
+  padding: 10px 22px;
+  color: #212121;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+  z-index: 10;
+}
+.NavBtnLink:hover {
+  transition: all 0.2s ease-in-out;
+  background: #b5b5b5;
+  color: #010606;
+}
+span {
+  margin-left: 16px;
+}
