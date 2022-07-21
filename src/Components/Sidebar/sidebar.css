@@ -28,6 +28,7 @@
   height: 80px;
   display: flex;
   justify-content: left;
+  cursor: pointer;
 }
 .NavBtnLink {
   border-radius: 0px;
