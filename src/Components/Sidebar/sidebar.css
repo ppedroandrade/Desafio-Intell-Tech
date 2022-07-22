@@ -1,14 +1,15 @@
 .nav-menu {
   background-color: #38cfc4;
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   height: 100vh;
-  display: flex;
   position: fixed;
   top: 0;
   left: -100%;
   transition: 850ms;
   justify-content: left;
   padding: 1rem 0.8rem;
+  z-index: 1;
 }
 
 .nav-menu.active {
@@ -18,6 +19,7 @@
 }
 
 .nav-menu-items{
+  height: 30px;
   display: flex;
   justify-content: center;
 }
@@ -25,7 +27,7 @@
 .navbar-toggle {
   background-color: #38cfc4;
   width: 100%;
-  height: 80px;
+  height: 10px;
   display: flex;
   justify-content: left;
   cursor: pointer;
@@ -45,4 +47,60 @@
   transition: all 0.2s ease-in-out;
   background: #b5b5b5;
   color: #010606;
+}
+.sideBarBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 0.8rem;
+  padding-top: 2rem;
+}
+
+.sideBarBtn-gphc{
+  align-items: center;
+  background-color: whitesmoke;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: left;
+  cursor: pointer;
+  gap: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+
+}
+
+.gphc-span{
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #212121;
+}
+
+.sideBarBtn-img  {
+  background-color: whitesmoke;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+  border: 1px dashed grey;
+}
+.img-span{
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #212121;
+  display: flex;
+  position: absolute;
+  bottom: 8px;
+  margin-top: 8px;
 }
