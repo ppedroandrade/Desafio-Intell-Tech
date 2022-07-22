@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Draggable from "react-draggable";
+import {Rnd} from 'react-rnd';
 
 
 import * as AiIcons from "react-icons/ai";
@@ -23,6 +23,14 @@ function Navbar() {
     const [file] = e.target.files;
     setImg(URL.createObjectURL(file));
   };
+
+  const Box = () => (
+    <div
+      className="box"
+      style={{ margin: 0, height: '100%', paddingBottom: '40px', backgroundImage:`url(${img})`, zIndex: '-10' }}
+    >
+    </div>
+  );
 
   return (
     <>
@@ -62,9 +70,17 @@ function Navbar() {
           />
         </button>
       </nav>
-      <Draggable>
-        <img src={img} alt="" />
-      </Draggable>
+      <Rnd
+      default={{
+        x: 750,
+        y: 195,
+        width: 500,
+        height: 190,
+      }}
+      bounds="window"
+    >
+       <Box />
+      </Rnd>
     </>
   );
 }

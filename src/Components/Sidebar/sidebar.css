@@ -104,3 +104,8 @@
   bottom: 8px;
   margin-top: 8px;
 }
+.box{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
