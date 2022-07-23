@@ -9,7 +9,7 @@ const Header = () => {
       <div className="nav">
         <Navbar />
         <div className="NavBtn">
-          <button className="NavBtnLinkPrinter">
+          <button className="NavBtnPrinter">
             <AiFillPrinter size={25} />
           </button>
         </div>

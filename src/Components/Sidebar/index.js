@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import {Rnd} from 'react-rnd';
 
+import BarChart from "../Graphics";
 
 import * as AiIcons from "react-icons/ai";
 import * as GoIcons from "react-icons/go";
@@ -9,6 +10,8 @@ import "./sidebar.css";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+  const [showGraphic, setShowGraphic] = useState(false);
+
 
   const showSidebar = () => setSidebar(!sidebar);
   const inputRef = useRef(null);
@@ -54,7 +57,7 @@ function Navbar() {
         </div>
 
         <div className="sideBarBtn">
-          <button className="sideBarBtn-gphc">
+          <button className="sideBarBtn-gphc" onClick={()=>setShowGraphic((prevShowGraphic )=> !prevShowGraphic)}>
             <GoIcons.GoGraph size={40} color={"black"} />
             <span className="gphc-span">Gerar gráfico aleatorio</span>
           </button>
@@ -81,6 +84,19 @@ function Navbar() {
     >
        <Box />
       </Rnd>
+      
+      {showGraphic && 
+      <Rnd
+      default={{
+        x: 750,
+        y: 195,
+        width: 500,
+        height: 190,
+      }}
+      bounds="window"
+    > 
+    <BarChart />
+      </Rnd>}
     </>
   );
 }
