@@ -24,8 +24,8 @@ const  ComponentsPdf = forwardRef(( {showGraphic, img}, ref) => {
     <div ref={ref} className="contentPdf">
       <Rnd
         default={{
-          x: 0,
-          y: 0,
+          x: 200,
+          y: 350,
           width: 500,
           height: 190,
         }}

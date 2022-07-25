@@ -5,7 +5,7 @@ import usePrint from "../../Contexts/Components-Context/Services/usePrint";
 
 
 import SideBar from "../Sidebar/sideBar";
-import "./header.css";
+import "./Header.css";
 
 
 const Header = ({setImg,setShowGraphic}) => {

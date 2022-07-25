@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Footer from "../../Components/Footer/footer";
-import Header from "../../Components/Header/header";
+import Footer from "../../Components/Footer/Footer";
+import Header from "../../Components/Header/Header";
 import usePrint from "../../Contexts/Components-Context/Services/usePrint";
 import Container from "./Components/Container";
 import Pdf from "./Components/Pdf/pdf";
