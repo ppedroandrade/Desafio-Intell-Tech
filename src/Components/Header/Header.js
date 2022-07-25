@@ -1,15 +1,21 @@
 import React from "react";
-import { AiFillPrinter } from "react-icons/ai";
-import Navbar from "../Sidebar";
-import "./Header.css";
 
-const Header = () => {
+import { AiFillPrinter } from "react-icons/ai";
+import usePrint from "../../Contexts/Components-Context/Services/usePrint";
+
+
+import SideBar from "../Sidebar/sideBar";
+import "./header.css";
+
+
+const Header = ({setImg,setShowGraphic}) => {
+const {handlePrint} = usePrint(); 
   return (
     <>
-      <div className="nav">
-        <Navbar />
-        <div className="NavBtn">
-          <button className="NavBtnPrinter">
+      <div className="Header">
+        <SideBar setImg={setImg} setShowGraphic={setShowGraphic} />
+        <div className="Header-Btn">
+          <button className="Header-Btn-Printer" onClick={() => handlePrint()}>
             <AiFillPrinter size={25} />
           </button>
         </div>

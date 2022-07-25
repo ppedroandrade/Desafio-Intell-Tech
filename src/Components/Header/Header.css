@@ -1,4 +1,4 @@
-.nav {
+.Header {
   background: #13a89e;
   align-items: center;
   display: flex;
@@ -6,13 +6,13 @@
   padding: 0 2rem;
   height: 60px;
 }
-.NavBtn {
+.Header-Btn {
   display: flex;
   margin-right: 24px;
   position: relative;
   @media screen and (max-width: 768px) display: none;
 }
-.NavBtnPrinter {
+.Header-Btn-Printer {
   display: flex;
   align-items: flex-end;
   border-radius: 0px;
@@ -24,17 +24,8 @@
   cursor: pointer;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
 }
-.NavBtnPrinter:hover {
+.Header-Btn-Printer:hover {
   transition: all 0.2s ease-in-out;
   background: #b5b5b5;
   color: #010606;
-}
-.react-icons {
-  display: inline-flex;
-  align-items: center;
-  size: 1rem;
-  outline: none;
-  border: none;
-  margin: 0px 8px 0px -2px;
-  size: 16px;
 }

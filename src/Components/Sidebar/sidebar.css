@@ -32,7 +32,7 @@
   justify-content: left;
   cursor: pointer;
 }
-.NavBtnLink {
+.add-btn {
   border-radius: 0px;
   background: whitesmoke;
   padding: 10px 22px;
@@ -43,7 +43,7 @@
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
   z-index: 10;
 }
-.NavBtnLink:hover {
+.add-btn:hover {
   transition: all 0.2s ease-in-out;
   background: #b5b5b5;
   color: #010606;
@@ -104,8 +104,12 @@
   bottom: 8px;
   margin-top: 8px;
 }
-.box{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.react-icons {
+  display: inline-flex;
+  align-items: center;
+  size: 1rem;
+  outline: none;
+  border: none;
+  margin: 0px 8px 0px -2px;
+  size: 16px;
 }

@@ -6,7 +6,7 @@ for(let i = 0; i < 6; i++) {
   dados.push(Math.floor(Math.random() * (1000 - 100) ));
 }
 
-export default function BarChart() {
+export default function Graphic() {
   const eChartsOption = {
     title: {
       text: "Grafico 1",
@@ -31,14 +31,14 @@ export default function BarChart() {
     },
   };
   return (
-    <div>
       <ReactEChart
         style={{
+          height: "100%",
           margin: "0",
           padding: "0",
+          border:"1px solid #5470C6"
         }}
         option={eChartsOption}
       />
-    </div>
   );
 }

@@ -1,17 +1,12 @@
 import React, { useState, useRef } from "react";
-import {Rnd} from 'react-rnd';
-
-import BarChart from "../Graphics";
 
 import * as AiIcons from "react-icons/ai";
 import * as GoIcons from "react-icons/go";
 
 import "./sidebar.css";
 
-function Navbar() {
+function SideBar({ setImg, setShowGraphic }) {
   const [sidebar, setSidebar] = useState(false);
-  const [showGraphic, setShowGraphic] = useState(false);
-
 
   const showSidebar = () => setSidebar(!sidebar);
   const inputRef = useRef(null);
@@ -20,31 +15,19 @@ function Navbar() {
     inputRef.current.click();
   };
 
-  const [img, setImg] = useState();
-
   const onImageChange = (e) => {
     const [file] = e.target.files;
     setImg(URL.createObjectURL(file));
   };
 
-  const Box = () => (
-    <div
-      className="box"
-      style={{ margin: 0, height: '100%', paddingBottom: '40px', backgroundImage:`url(${img})`, zIndex: '-10' }}
-    >
-    </div>
-  );
-
   return (
     <>
-      <div className="navbar">
-        <div className="menu-bars">
-          <button className="NavBtnLink react-icons" onClick={showSidebar}>
+        <div>
+          <button className="add-btn react-icons" onClick={showSidebar}>
             <AiIcons.AiFillPlusSquare className="react-icons" size={20} />
             <span>Adicionar</span>
           </button>
         </div>
-      </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <div className="nav-menu-items" onClick={showSidebar}>
           <span className="navbar-toggle">
@@ -57,7 +40,12 @@ function Navbar() {
         </div>
 
         <div className="sideBarBtn">
-          <button className="sideBarBtn-gphc" onClick={()=>setShowGraphic((prevShowGraphic )=> !prevShowGraphic)}>
+          <button
+            className="sideBarBtn-gphc"
+            onClick={() =>
+              setShowGraphic((prevShowGraphic) => !prevShowGraphic)
+            }
+          >
             <GoIcons.GoGraph size={40} color={"black"} />
             <span className="gphc-span">Gerar gráfico aleatorio</span>
           </button>
@@ -73,32 +61,8 @@ function Navbar() {
           />
         </button>
       </nav>
-      <Rnd
-      default={{
-        x: 750,
-        y: 195,
-        width: 500,
-        height: 190,
-      }}
-      bounds="window"
-    >
-       <Box />
-      </Rnd>
-      
-      {showGraphic && 
-      <Rnd
-      default={{
-        x: 750,
-        y: 195,
-        width: 500,
-        height: 190,
-      }}
-      bounds="window"
-    > 
-    <BarChart />
-      </Rnd>}
     </>
   );
 }
 
-export default Navbar;
+export default SideBar;
