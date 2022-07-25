@@ -1,15 +1,23 @@
 .card {
   background-color: #f1f1f1;
   width: 100%;
-  height: 90vh;
-  max-width: 700px;
+  height: 100vh;
+  max-width: 900px;
   margin-inline: auto;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+  position: relative;
 }
 .contentCard {
   border-left: 1px dashed grey;
   border-right: 1px dashed grey;
-  margin: 0 24px;
+  margin: 0 12px;
   height: 100%;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 12%);
+}
+@media print {
+  .card{
+    background-image: url('../../../../Image/Fundo-Pdf.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }

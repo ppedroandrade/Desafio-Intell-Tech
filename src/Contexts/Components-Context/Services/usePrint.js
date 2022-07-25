@@ -7,7 +7,8 @@ export default function usePrint() {
         
     const handlePrint = useReactToPrint({
       content: () => componentsPdfRef.current,
-      documentTitle: "Print",
+      documentTitle: "Desafio-Intelltech",
+      
     });
   return {handlePrint, componentsPdfRef}
 }
